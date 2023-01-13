@@ -38,10 +38,12 @@ class DWT(layers.Layer):
         self.border_padd = "SYMMETRIC"
         
     def get_config(self):
-        return {
-            "wavelet_name": self.wavelet_name,
-            "concat": self.concat
-        }
+        config = super().get_config().copy()
+        config.update({
+            'wavelet_name': self.wavelet_name,
+            'concat': self.concat,
+        })
+        return config
 
     @classmethod
     def from_config(cls, config):
