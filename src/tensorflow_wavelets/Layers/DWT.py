@@ -36,6 +36,16 @@ class DWT(layers.Layer):
 
         self.conv_type = "VALID"
         self.border_padd = "SYMMETRIC"
+        
+    def get_config(self):
+        return {
+            "wavelet_name": self.wavelet_name,
+            "concat": self.concat
+        }
+
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)        
 
     def build(self, input_shape):
         # filter dims should be bigger if input is not gray scale
