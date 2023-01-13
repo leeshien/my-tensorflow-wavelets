@@ -11,7 +11,7 @@ setuptools.setup(
     description="Tensorflow wavelet Layers",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://https://github.com/Timorleiderman/tensorflow-wavelets",
+    url="https://github.com/leeshien/my-tensorflow-wavelets",
     project_urls={
         "Bug Tracker": "https://github.com/Timorleiderman/tensorflow-wavelets/issues",
     },
